@@ -41,35 +41,35 @@ GreenDAO是一个将对象映射到SQLite数据库中的轻量且快速的ORM解
   <p/>  targetGenDir 'src/main/java'
    <p/> daoPackage 'com.example.shisjin.greendao.db'
 <p/>}
-<div>
-greendao中的注解
-(一) @Entity 定义实体
-@nameInDb 在数据库中的名字，如不写则为实体中类名
-@indexes 索引
-@createInDb 是否创建表，默认为true,false时不创建
-@schema 指定架构名称为实体
-@active 无论是更新生成都刷新
-(二) @Id
-(三) @NotNull 不为null
-(四) @Unique 唯一约束
-(五) @ToMany 一对多
-(六) @OrderBy 排序
-(七) @ToOne 一对一
-(八) @Transient 不存储在数据库中
-(九) @generated 由greendao产生的构造函数或方法
 
-具体步骤
-创建列表（实体类）:
+<p/>greendao中的注解
+<p/>(一) @Entity 定义实体
+<p/>@nameInDb 在数据库中的名字，如不写则为实体中类名
+<p/>@indexes 索引
+<p/>@createInDb 是否创建表，默认为true,false时不创建
+<p/>@schema 指定架构名称为实体
+<p/>@active 无论是更新生成都刷新
+<p/>(二) @Id
+<p/>(三) @NotNull 不为null
+<p/>(四) @Unique 唯一约束
+<p/>(五) @ToMany 一对多
+<p/>(六) @OrderBy 排序
+<p/>(七) @ToOne 一对一
+<p/>(八) @Transient 不存储在数据库中
+<p/>(九) @generated 由greendao产生的构造函数或方法
 
-@Entity
-public class UserEntity {
-    @Id
-    private  Long id;
-    @Property
-    private String username;
-    @Property(nameInDb = "passwd")
-    private String password;
-</div>
+<p/>具体步骤
+<p/>创建列表（实体类）:
+
+<p/>@Entity
+<p/>public class UserEntity {
+    <p/>@Id
+    <p/>private  Long id;
+    <p/>@Property
+    <p/>private String username;
+    <p/>@Property(nameInDb = "passwd")
+    <p/>private String password;
+
 <p/>然后点击build
 <p/>![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard.png)
 
