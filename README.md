@@ -72,6 +72,7 @@ public class UserEntity {
 
 然后点击build
 ![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard.png)
+
 就根据greendao写的内容在对应位置生成相关类，就这么任性！
 ![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard2.png)
 
