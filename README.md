@@ -1,0 +1,2 @@
+# GreenDAO
+GreenDAO是一个将对象映射到SQLite数据库中的轻量且快速的ORM解决方案
