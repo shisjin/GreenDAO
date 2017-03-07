@@ -1,7 +1,7 @@
 # GreenDAO
 GreenDAO是一个将对象映射到SQLite数据库中的轻量且快速的ORM解决方案
 
-技术要点：
+<p/>技术要点：
 /**
  * 1.引入greenDAO,project的gradle文件和module的gradle文件一共修改四个地方
  * 2.在module的gradle文件中配置数据库版本号、生成代码的位置等参数
@@ -10,38 +10,38 @@ GreenDAO是一个将对象映射到SQLite数据库中的轻量且快速的ORM解
  */
 
 
-project的build.gradle文件添加
+<p/>project的build.gradle文件添加
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
-    }
-}
+<p/>buildscript {
+ <p/>   repositories {
+    <p/>    mavenCentral()
+  <p/>  }
+ <p/>   dependencies {
+ <p/>       classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+<p/>    }
+<p/>}
 
-app的buil.gradle文件添加
+<p/>app的buil.gradle文件添加
 
-apply plugin: 'org.greenrobot.greendao'
+<p/>apply plugin: 'org.greenrobot.greendao'
 
-dependencies {
-    compile 'org.greenrobot:greendao:3.2.0'
-}
+<p/>dependencies {
+  <p/>  compile 'org.greenrobot:greendao:3.2.0'
+<p/>}
 
-同时添加：
-greendao{
-   /* 属性介绍：
-    schemaVersion--> 指定数据库schema版本号，迁移等操作会用到;
-    daoPackage --> dao的包名，包名默认是entity所在的包；
-    targetGenDir --> 生成数据库文件的目录;*/
-    //配置数据库版本号
-    schemaVersion 1
-    //位置
-    targetGenDir 'src/main/java'
-    daoPackage 'com.example.shisjin.greendao.db'
-}
-
+<p/>同时添加：
+<p/>greendao{
+ <p/>  /* 属性介绍：
+  <p/>  schemaVersion--> 指定数据库schema版本号，迁移等操作会用到;
+  <p/>  daoPackage --> dao的包名，包名默认是entity所在的包；
+  <p/>  targetGenDir --> 生成数据库文件的目录;*/
+  <p/>  //配置数据库版本号
+ <p/>   schemaVersion 1
+  <p/> //位置
+  <p/>  targetGenDir 'src/main/java'
+   <p/> daoPackage 'com.example.shisjin.greendao.db'
+<p/>}
+<div>
 greendao中的注解
 (一) @Entity 定义实体
 @nameInDb 在数据库中的名字，如不写则为实体中类名
@@ -69,10 +69,10 @@ public class UserEntity {
     private String username;
     @Property(nameInDb = "passwd")
     private String password;
+</div>
+<p/>然后点击build
+<p/>![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard.png)
 
-然后点击build
-![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard.png)
-
-就根据greendao写的内容在对应位置生成相关类，就这么任性！
-![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard2.png)
+<p/>就根据greendao写的内容在对应位置生成相关类，就这么任性！
+<p/>![image](https://github.com/shisjin/GreenDAO/blob/master/imgs/clipboard2.png)
 
